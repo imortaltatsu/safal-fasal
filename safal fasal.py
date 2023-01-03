@@ -25,6 +25,9 @@ def phpredictor_(ph,water):
         return(ph-5.5)
     else:
         return(5.5-ph)
+def predict():
+    ph=phpredictor_(ph,water)
+statelist=("Andhra Pradesh","Arunachal Pradesh ","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli","Daman and Diu","Lakshadweep","National Capital Territory of Delhi","Puducherry")   
 frame = Tk()
 frame.title("SAFAL FASAL")
 frame.protocol("WM_DELETE_WINDOW",frame.destroy)
@@ -43,7 +46,6 @@ List = Listbox()
 List.grid(column= 0,row =2)
 List1 = Listbox()
 List1.grid(column= 1,row =2)
-sugest= ttk.Button(text ="enter",command=api_call())
+sugest= ttk.Button(text ="enter",command=predict())
 sugest.grid(column=1,row =3)
 frame.mainloop()
-
