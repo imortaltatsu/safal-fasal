@@ -27,7 +27,12 @@ def phpredictor_(ph,water):
         return(5.5-ph)
 def predict(ph,fieldsize):
     x=api_call()
-    water=x[]
+    temp=x['result']['temp']['mean']
+    rain=x['result']['precipitation']['mean']
+    root = Tk()
+    root.title("result")
+    root.protocol("WM_DELETE_WINDOW",root.destroy)
+    root.geometry('350x300')
 statelist=("Andhra Pradesh","Arunachal Pradesh ","Assam","Bihar","Chhattisgarh","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Andaman and Nicobar Islands","Chandigarh","Dadra and Nagar Haveli","Daman and Diu","Lakshadweep","National Capital Territory of Delhi","Puducherry")   
 frame = Tk()
 frame.title("SAFAL FASAL")
