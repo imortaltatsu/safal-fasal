@@ -6,16 +6,20 @@ def api_call():
     api_key = "982d13cc7a9a0afd41ec7d1bf3ded48b"
     base_url = "https://history.openweathermap.org/data/2.5/aggregated/month?"
     city_name = "Delhi"
-    import datetime
+    from datetime import datetime
     date = datetime.now()
     month_number = date.month
     month=str(month_number)
-    print(complete_url)
     complete_url = base_url+"month="+month+"&q=" + city_name+"&appid="+api_key
     response = requests.get(complete_url)
     x = response.json()
     print(x)
     return x
+de
+def showw():
+    newWindow = Toplevel(frame)
+    newWindow.title("New Window")
+    newWindow.geometry("200x200")
 def getfromlist(list):
         for i in List.curselection():
                 x = (List.get(i))
@@ -55,6 +59,6 @@ List = Listbox()
 List.grid(column= 0,row =2)
 List1 = Listbox()
 List1.grid(column= 1,row =2)
-sugest= ttk.Button(text ="enter",command=predict(ph,fieldsize))
+sugest= ttk.Button(text ="enter",command=showw)
 sugest.grid(column=1,row =3)
 frame.mainloop()
